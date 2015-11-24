@@ -6,19 +6,19 @@ function [ output_args ] = collect_data()
     
     name = 'DSCF4177';  
     name1 = 'DSCF4178';
-    file = '/common/cs/cs181m/data/horse/DSCF4177.jpg';
-    file2 = '/common/cs/cs181m/data/horse/DSCF4178.jpg';
-    Im1 = im2double(imread(file));
-    Im2 = im2double(imread(file2));
+%     file = 'DSCF4177.jpg';
+%     file2 = 'DSCF4178.jpg';
+%     Im1 = im2double(imread(file));
+%     Im2 = im2double(imread(file2));
     % pts are the points the two images have in common
     % top- RBL, top RBR, top RTR, top YLB, top YRB, top YRT
     pts = [0 0 29; 64 0 29; 64 64 29; 0 48 67; 32 48 67; 32 80 67];
-    if(plot == 1)
-        scatter3(pts(:,1), pts(:,2), pts(:,3))
-    end
-    camMat = make_cam_mat(Im1, Im2, pts, name, name1);
+%     if(plot == 1)
+%         scatter3(pts(:,1), pts(:,2), pts(:,3))
+%     end
+    make_cam_mat(name, name1);
     
-    epiLineTool(camMat)
+%     epiLineTool(camMat)
 
 %     name = 'DSCF4181';
 %     name1 = 'DSCF4182';
