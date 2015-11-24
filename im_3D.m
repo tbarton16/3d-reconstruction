@@ -10,4 +10,4 @@ output_dir = './';
 input_file_ext = 'jpg';
 files = dir([input_dir '*.' input_file_ext]);
 
-collect_data(); 
+% collect_data(); 
