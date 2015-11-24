@@ -32,7 +32,7 @@ function [ camMat ] = computeCamMat (proj_pts, real_pts)
 %     test_pts =  camMat* real_pts(5,:)'
 %     test_pts =  camMat* real_pts(6,:)'
 %     
-    disp(real_pts)
+    disp(real_pts);
     disp(proj_pts)
 end
 

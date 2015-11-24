@@ -16,7 +16,9 @@ function [ output_args ] = collect_data()
     if(plot == 1)
         scatter3(pts(:,1), pts(:,2), pts(:,3))
     end
-    make_cam_mat(Im1, Im2, pts, name, name1);
+    camMat = make_cam_mat(Im1, Im2, pts, name, name1);
+    
+    epiLineTool(camMat)
 
 %     name = 'DSCF4181';
 %     name1 = 'DSCF4182';

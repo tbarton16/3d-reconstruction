@@ -13,4 +13,6 @@ function [] = make_cam_mat( img1, img2, pts, name1, name2)
 %     Save into matrix and into workspace
     save([name1 ' cammat'],'camMat1')
     save([name2 ' cammat'], 'camMat2')
+%     checkMate1 = checkCamMat(movingPoints, real_points)
+%     checkMate2 = checkCamMat(fixedPoints, real_points)
 end
