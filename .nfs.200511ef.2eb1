@@ -13,7 +13,3 @@
     load('/home/tbarton/Desktop/Project4/DSCF4178 2dpts.mat')
     load('/home/tbarton/Desktop/Project4/DSCF4177 2dpts.mat')
     load('/home/tbarton/Desktop/Project4/DSCF4177DSCF4178.mat')
-    
-    load('/home/mmartinez/Desktop/CS181/Project4/3d-reconstruction/DSCF4178 2dpts.mat')
-    load('/home/mmartinez/Desktop/CS181/Project4/3d-reconstruction/DSCF4177 2dpts.mat')
-    load('/home/mmartinez/Desktop/CS181/Project4/3d-reconstruction/DSCF4177DSCF4178.mat')
