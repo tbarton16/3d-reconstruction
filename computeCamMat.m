@@ -1,9 +1,12 @@
 function [ camMat ] = computeCamMat (proj_pts, real_pts)
 %ComputeCamMat Computes Camera Matrix and saves to workspace
 %   Detailed explanation goes here
-
-    proj_pts = normalize(proj_pts);
-    real_pts = normalize(proj_pts);
+    
+    all_mean = mean2([mean2(proj_pts) mean2(real_pts)]);
+    all_sd =  std2([std2(proj_pts) std2(real_pts)]);
+    
+    proj_pts = ((proj_pts - all_mean)/ all_sd) * sqrt(2)
+    real_pts = ((real_pts - all_mean)/ all_sd) * sqrt(2)
     
 %     add ones
     proj_pts = [ proj_pts ones(6,1) ];
