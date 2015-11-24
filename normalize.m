@@ -1,5 +1,5 @@
 function [ pts ] = normalize( points )
-%UNTITLED Summary of this function goes here
+%UNTITLED normalizes the points given
 %   Detailed explanation goes here
 
     pts = ((points - mean(points)) / std(pointss)) * sqrt(2);

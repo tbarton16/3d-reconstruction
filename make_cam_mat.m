@@ -18,9 +18,9 @@ function [ camMat ] = make_cam_mat( img1, img2, pts, name1, name2)
 %         fixedPoints = load('/home/tbarton/Desktop/Project4/DSCF4178 2dpts.mat')
 %         movingPoints = load('/home/tbarton/Desktop/Project4/DSCF4177 2dpts.mat')
 %         real_points = load('/home/tbarton/Desktop/Project4/DSCF4177DSCF4178 3d.mat')
-load('/home/tbarton/Desktop/Project4/DSCF4178 2dpts.mat')
-load('/home/tbarton/Desktop/Project4/DSCF4177 2dpts.mat')
- load('/home/tbarton/Desktop/Project4/DSCF4177DSCF4178 3d.mat')
+load('/home/mmartinez/Desktop/CS181/Project4/3d-reconstruction/DSCF4178 2dpts.mat')
+load('/home/mmartinez/Desktop/CS181/Project4/3d-reconstruction/DSCF4177 2dpts.mat')
+load('/home/mmartinez/Desktop/CS181/Project4/3d-reconstruction/DSCF4177DSCF4178 3d.mat')
         
     end
     disp(movingPoints)

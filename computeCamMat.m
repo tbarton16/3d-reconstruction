@@ -1,6 +1,7 @@
 function [ camMat ] = computeCamMat (proj_pts, real_pts)
 %ComputeCamMat Computes Camera Matrix and saves to workspace
 %   Detailed explanation goes here
+
     proj_pts = normalize(proj_pts);
     real_pts = normalize(proj_pts);
 
@@ -15,6 +16,6 @@ function [ camMat ] = computeCamMat (proj_pts, real_pts)
     [U S V] = svd(A);
     P = V(:, end);
     camMat = reshape(P, 4,3);
-%     TODO unnormalize the points here
+%   TODO unnormalize the points here
 end
 
