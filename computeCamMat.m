@@ -4,6 +4,10 @@ function [ camMat ] = computeCamMat (proj_pts, real_pts)
 
     proj_pts = normalize(proj_pts);
     real_pts = normalize(proj_pts);
+    
+%     add ones
+    proj_pts = [ proj_pts ones(6,1) ];
+    real_pts = [ real_pts ones(6,1) ];
 
     camMat = [0 0 0 0 -proj_pts(1 , 3) * real_pts(1,:) proj_pts(1, 2) *  real_pts(1,:);
                   proj_pts(1 , 3) * real_pts(1,:) 0 0 0 0 -proj_pts(1, 1) *  real_pts(1,:) ] ; 
