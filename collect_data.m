@@ -1,6 +1,9 @@
 function [ output_args ] = collect_data()
     %UNTITLED2 Summary of this function goes here
     %   Detailed explanation goes here
+    
+    plot = 0;
+    
     name = 'DSCF4177';
     name1 = 'DSCF4178';
     file = '/common/cs/cs181m/data/horse/DSCF4177.jpg';
@@ -10,6 +13,9 @@ function [ output_args ] = collect_data()
     % pts are the points the two images have in common
     % top- RBL, top RBR, top RTR, top YLB, top YRB, top YRT
     pts = [0 0 29; 64 0 29; 64 64 29; 0 48 67; 32 48 67; 32 80 67];
+    if(plot == 1)
+        scatter3(pts(:,1), pts(:,2), pts(:,3))
+    end
     make_cam_mat(Im1, Im2, pts, name, name1 );
 
     name = 'DSCF4181';
@@ -21,6 +27,9 @@ function [ output_args ] = collect_data()
     % yellow left top, yellow left bottom, yellow right bottom, center GLT, centerGLB,
     % GRB
     pts = [0, 80, 67; 0, 48, 67; 32, 48, 67; 16, 48, 48; 16, 16, 48; 48, 16, 48];
+    if(plot == 1)
+        scatter3(pts(:,1), pts(:,2), pts(:,3))
+    end
     make_cam_mat(Im1, Im2,pts, name, name1);
     
     name = 'DSCF4186';
@@ -31,6 +40,9 @@ function [ output_args ] = collect_data()
     Im2 = im2double(imread(file2));
     % YTR, YLT,bottom YLT, bottom YRT, bottom BTL, corner top GTR
     pts = [32, 80, 67; 0, 80, 67; 0, 80, 48; 32, 80, 48; 0, 64, 0; 32, 80, 48];
+    if(plot == 1)
+         scatter3(pts(:,1), pts(:,2), pts(:,3))
+    end
     make_cam_mat(Im1, Im2,pts, name, name1);
     
     name = 'DSCF4194';
@@ -41,6 +53,9 @@ function [ output_args ] = collect_data()
     Im2 = im2double(imread(file2));
     % bottom BRB, bottom BrB, top BRB,top BRT, top YTR, top YRB
     pts = [64, 0, 0; 64, 0, 19; 64, 0, 19; 64, 64, 19; 32, 80, 67; 32, 48, 67];
+    if(plot == 1)
+        scatter3(pts(:,1), pts(:,2), pts(:,3))
+    end
     make_cam_mat(Im1, Im2,pts, name, name1);
 
 
